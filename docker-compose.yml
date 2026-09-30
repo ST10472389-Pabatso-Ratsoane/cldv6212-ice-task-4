@@ -1,0 +1,13 @@
+services:
+  functions-app:
+    build:
+      context: .
+      dockerfile: CoffeeNChill_Ice_Task4/Dockerfile
+    image: st10472389/coffenchillapi:latest
+    container_name: poe-coffee-n-chill
+    ports:
+      - "80:80"
+    environment:
+      - AzureWebJobsStorage=UseDevelopmentStorage=true
+      - FUNCS_WORKER_RUNTIME=dotnet-isolated
+    restart: always
