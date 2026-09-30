@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "POE_CoffeeNChill": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7283"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "containerRunArguments": "--init",
+      "httpPort": 32283,
+      "useSSL": false
+    }
+  }
+}
