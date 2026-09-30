@@ -1,4 +1,15 @@
 services:
+  # Azure Storage Emulator
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    container_name: azurite
+
+    ports:
+      - "10000:10000"
+      - "10001:10001"
+      - "10002:10002"
+
+  # Azure Functions project
   functions-app:
     build:
       context: .
